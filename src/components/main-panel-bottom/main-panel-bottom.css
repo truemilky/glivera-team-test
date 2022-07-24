@@ -1,0 +1,31 @@
+.main-pannel__bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-pannel__bottom-link {
+    color: #fff;
+    font-size: 14px;
+    line-height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.main-pannel__bottom-link:hover {
+    color: #DB9351;
+    transition: color .3s ease-in-out;
+}
+
+.main-pannel__bottom-link.active {
+    height: 20px;
+    color: #DB9351;
+    border: 1px solid #DB9351;
+    border-radius: 50%;
+}
+
+@media(max-width: 730px) {
+    .main-pannel__bottom {
+        justify-content: center;
+    }
+}

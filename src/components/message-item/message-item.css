@@ -1,0 +1,203 @@
+.message-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    transition: border .3s ease-in-out;
+}
+
+.message-item:hover {
+    border-top: 1px solid #DB9351;
+    border-bottom: 1px solid #DB9351;
+    transition: border .3s ease-in-out;
+}
+
+.message-item__select {
+    width: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.message-item__checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.message-item__checkbox:checked {
+    opacity: 0;
+}
+
+.message-item__checkbox+.message-select__custom {
+    position: relative;
+    left: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.message-item__checkbox:checked+.message-select__custom:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    top: 50%;
+    Left: 54%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.message-item__avatar-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.message-item__avatar {
+    position: relative;
+}
+
+.message-item__avatar-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.message-item__user--online {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ABDB51;
+}
+
+.message-item__avatar.active>.message-item__user--online {
+    display: block;
+}
+
+.message-item__user-name {
+    width: 140px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.message-item__user-name--text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.message-item__user-name,
+.message__text,
+.message-item__date-text,
+.message-item__time-text {
+    font-size: 13px;
+    color: #fff;
+}
+
+.message__text {
+    color: #707070;
+    transition: color .3s ease-in-out;
+}
+
+.message-item__date-text,
+.message-item__time-text {
+    transition: color .3s ease-in-out;
+    color: #959595
+}
+
+.message-item__date-text.active,
+.message-item__time-text.active,
+.message__text.active {
+    color: #fff;
+    transition: color .3s ease-in-out;
+}
+
+.message-ite__shop-cart {
+    display: none;
+    padding-left: 10px;
+}
+
+.message-ite__shop-cart.active {
+    display: inline-block;
+}
+
+.message-item__message {
+    position: relative;
+    width: 350px;
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.message-item__message:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #151515)
+}
+
+.message-item__date {
+    margin-right: 10px;
+}
+
+@media(max-width: 990px) {
+    .message-item__user-name {
+        width: 100px;
+    }
+
+    .message-item__message {
+        width: 190px;
+    }
+}
+
+@media(max-width: 530px) {
+
+    .message-item__user-name,
+    .message__text,
+    .message-item__date-text,
+    .message-item__time-text {
+        font-size: 10px;
+    }
+
+    .message-item__date-text,
+    .message-item__time-text {
+        font-size: 10px;
+    }
+
+    .message-item__user-name {
+        width: 55px;
+    }
+
+    .message-ite__shop-cart {
+        width: 20px;
+        object-fit: contain;
+    }
+
+    .message-item__select, .message-item__avatar-wrapper, .message-item__user-name, .message-item__message, .message-item__date {
+        margin-right: 5px;
+    }
+
+    .message-item__message {
+        width: 85px;
+    }
+}
