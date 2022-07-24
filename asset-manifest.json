@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/glivera-team-test-react/static/css/main.bcb537c0.css",
+    "main.js": "/glivera-team-test-react/static/js/main.297241ea.js",
+    "static/media/avatar.jpg": "/glivera-team-test-react/static/media/avatar.fd0dcdebbfe47b7b8f9e.jpg",
+    "index.html": "/glivera-team-test-react/index.html",
+    "main.bcb537c0.css.map": "/glivera-team-test-react/static/css/main.bcb537c0.css.map",
+    "main.297241ea.js.map": "/glivera-team-test-react/static/js/main.297241ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcb537c0.css",
+    "static/js/main.297241ea.js"
+  ]
+}
